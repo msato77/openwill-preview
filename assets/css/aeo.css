@@ -1,0 +1,133 @@
+/* FAQ（トップ・サービスページ共通） */
+.bl_faq {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.ly_container > .ly_inner > .bl_faq {
+  padding: clamp(60px, 5vw, 80px) 0;
+}
+.bl_faq .faqHeading {
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: clamp(24px, 2vw, 32px);
+}
+.bl_topFaq .bl_faq {
+  margin-top: clamp(36px, 3vw, 48px);
+}
+.bl_faq .faqList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+}
+.bl_faq .faqItem {
+  border-bottom: 1px solid #ddd;
+}
+.bl_faq .faqItem summary {
+  position: relative;
+  display: block;
+  padding: 20px 40px 20px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.bl_faq .faqItem summary::-webkit-details-marker {
+  display: none;
+}
+.bl_faq .faqItem summary::after {
+  content: "+";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--color-blue-base);
+}
+.bl_faq .faqItem[open] summary::after {
+  content: "−";
+}
+.bl_faq .faqQuestion {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: clamp(15px, 1.125vw, 18px);
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+.bl_faq .faqLabel {
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 1.4;
+  color: var(--color-blue-base);
+}
+.bl_faq .faqLabel.-a {
+  color: var(--color-gray-base);
+}
+.bl_faq .faqAnswer {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 0 40px 24px 0;
+}
+.bl_faq .faqAnswer p {
+  margin: 0;
+  line-height: 1.9;
+}
+
+/* Works 一覧ページ */
+.bl_worksIndex {
+  padding-bottom: clamp(60px, 5vw, 80px);
+}
+.bl_worksIndex .pageTitle {
+  font-size: clamp(24px, 2vw, 32px);
+  font-weight: 600;
+  margin-top: clamp(30px, 2.5vw, 40px);
+}
+.bl_worksIndex .lead {
+  margin-top: 12px;
+  line-height: 1.9;
+}
+.bl_worksIndex .worksList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 2vw, 32px);
+  margin-top: clamp(36px, 3vw, 48px);
+}
+.bl_topOurworks .worksMore {
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .bl_worksIndex .worksList {
+    grid-template-columns: 1fr;
+    gap: 5.3333333333vw;
+  }
+  .bl_faq .faqItem summary {
+    padding: 16px 32px 16px 0;
+  }
+  .bl_faq .faqAnswer {
+    padding: 0 0 20px 0;
+  }
+}
+.bl_faq .faqAnswer a {
+  color: var(--color-blue-base);
+  text-decoration: underline;
+}
+.bl_faq .faqAnswer a:hover {
+  text-decoration: none;
+}
+
+/* トップ「実績一覧を見る」：マウスオンでお問い合わせの送信ボタンと同じ背景色に */
+.bl_topOurworks .worksMore .el_button.-border {
+  transition: background-color .3s ease-out, border-color .3s ease-out, color .3s ease-out;
+}
+.bl_topOurworks .worksMore .el_button.-border:hover {
+  background-color: var(--color-blue-base);
+  border-color: var(--color-blue-base);
+  color: #fff;
+  opacity: 1;
+}
