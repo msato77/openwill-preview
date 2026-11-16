@@ -100,8 +100,12 @@
 }
 .bl_topOurworks .worksMore {
   text-align: center;
+  margin-top: clamp(40px, 3.333vw, 56px);
 }
 @media only screen and (max-width: 767px) {
+  .bl_topOurworks .worksMore {
+    margin-top: 10.6666666667vw;
+  }
   .bl_worksIndex .worksList {
     grid-template-columns: 1fr;
     gap: 5.3333333333vw;
